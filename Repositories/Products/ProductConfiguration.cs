@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Repositories;
+namespace Repositories.Products;
 
 public class ProductConfiguration : IEntityTypeConfiguration<Product>
 {
@@ -11,6 +11,6 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
         builder.Property(x => x.Name).IsRequired().HasMaxLength(150);
         builder.Property(x => x.Price).IsRequired().HasColumnType("decimal(18,2)");
 
-        }
+    }
 }
 
