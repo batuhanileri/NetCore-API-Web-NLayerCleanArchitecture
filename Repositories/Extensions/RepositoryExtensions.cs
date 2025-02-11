@@ -21,6 +21,8 @@ namespace Repositories.Extensions
 
             services.AddScoped<IProductRepository,ProductRepository>();
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             return services;
         }
 
